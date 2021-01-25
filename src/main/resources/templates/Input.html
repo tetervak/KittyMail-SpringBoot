@@ -10,9 +10,9 @@
 <form action="Output.html" th:action="@{Process}">
     <h2>Message</h2>
     <p>
-        <label><input type="radio" name="message" th:value="0">Purr</label>
-        <label><input type="radio" name="message" th:value="1" checked>Mew</label>
-        <label><input type="radio" name="message" th:value="2">Hiss</label>
+        <label><input type="radio" th:name="message" th:value="0">Purr</label>
+        <label><input type="radio" th:name="message" th:value="1" checked>Mew</label>
+        <label><input type="radio" th:name="message" th:value="2">Hiss</label>
     </p>
     <p>
         <label><input type="checkbox">Registered</label>

@@ -25,4 +25,12 @@ public class Envelope implements Serializable {
     public void setRegistered(boolean registered) {
         this.registered = registered;
     }
+
+    @Override
+    public String toString() {
+        return "Envelope{" +
+                "message=" + message +
+                ", registered=" + registered +
+                '}';
+    }
 }

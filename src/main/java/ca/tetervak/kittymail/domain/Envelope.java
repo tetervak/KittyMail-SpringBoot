@@ -1,10 +1,15 @@
 package ca.tetervak.kittymail.domain;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.io.Serializable;
 
 public class Envelope implements Serializable {
 
+    @Min(0)
+    @Max(2)
     private int message = 1;
+    // no need to validate the boolean
     private boolean registered = false;
 
     public Envelope() {

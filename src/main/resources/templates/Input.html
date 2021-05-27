@@ -7,12 +7,18 @@
 </head>
 <body>
 <h1>Input</h1>
-<form action="Output.html" th:action="@{Process}">
+<form action="Output.html" th:action="@{Process}" th:object="${envelope}">
+    <div th:if="${#fields.hasErrors('*')}">
+        <h3 class="error">Input Errors</h3>
+        <ul>
+            <li class="error" th:each="e: ${#fields.errors('*')}" th:text="${e}">Input Error</li>
+        </ul>
+    </div>
     <h2>Message</h2>
     <p>
-        <label><input type="radio" name="message" th:value="0">Purr</label>
-        <label><input type="radio" name="message" th:value="1" checked>Mew</label>
-        <label><input type="radio" name="message" th:value="2">Hiss</label>
+        <label><input type="radio" th:field="*{message}" th:value="0">Purr</label>
+        <label><input type="radio" th:field="*{message}" th:value="1">Mew</label>
+        <label><input type="radio" th:field="*{message}" th:value="2">Hiss</label>
     </p>
     <p>
         <label><input type="checkbox" th:name="registered">Registered</label>

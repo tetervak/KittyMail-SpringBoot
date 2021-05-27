@@ -4,6 +4,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
 
+@SuppressWarnings("unused")
 public class Envelope implements Serializable {
 
     @Min(0)

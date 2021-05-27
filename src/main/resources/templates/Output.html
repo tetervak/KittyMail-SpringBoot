@@ -9,13 +9,13 @@
 <h1>Output</h1>
 <h2>Message</h2>
 
-<th:block th:switch="${envelope.message}">
+<div th:switch="${envelope.message}">
     <p th:case="0">Purr</p>
     <!--/*/
     <p th:case="1">Mew</p>
     <p th:case="*">Hiss</p>
     /*/-->
-</th:block>
+</div>
 
 <p th:text="${envelope.registered}?'Registered':'Not Registered'">Not Registered</p>
 <p>

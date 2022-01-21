@@ -6,8 +6,8 @@ import java.io.Serializable;
 public class Envelope implements Serializable {
 
     private int message = 1;
-    // no need to validate the boolean
-    private boolean registered = true;
+    // it is important to keep it false without data binding
+    private boolean registered = false;
 
     public Envelope() {
     }

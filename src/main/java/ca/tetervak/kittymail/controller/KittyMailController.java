@@ -8,16 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
-
 @Controller
 public class KittyMailController {
 
     private final Logger logger = LoggerFactory.getLogger(KittyMailController.class);
 
     @GetMapping(value={"/", "/Input"})
-    public ModelAndView input(){
+    public String input(){
         logger.trace("input() is called");
-        return new ModelAndView("Input", "envelope", new Envelope());
+        return "Input";
     }
 
     @GetMapping("/Process")

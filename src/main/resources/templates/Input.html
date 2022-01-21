@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Input</h1>
-<form action="Output.html" th:action="@{Process}" th:object="${envelope}">
+<form action="Output.html" th:action="@{process}" th:object="${envelope}">
     <div th:if="${#fields.hasErrors('*')}">
         <h3 class="error">Input Errors</h3>
         <ul>

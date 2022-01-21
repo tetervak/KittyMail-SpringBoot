@@ -13,13 +13,13 @@ public class KittyMailController {
 
     private final Logger logger = LoggerFactory.getLogger(KittyMailController.class);
 
-    @GetMapping(value={"/", "/Input"})
+    @GetMapping(value={"/", "/input"})
     public String input(){
         logger.trace("input() is called");
         return "Input";
     }
 
-    @GetMapping("/Process")
+    @GetMapping("/process")
     public ModelAndView process(@ModelAttribute Envelope envelope){
         logger.trace("process() is called");
         logger.debug("envelope = " + envelope);

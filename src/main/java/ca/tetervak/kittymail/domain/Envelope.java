@@ -7,20 +7,18 @@ import java.io.Serializable;
 @SuppressWarnings("unused")
 public class Envelope implements Serializable {
 
-    @Min(0)
-    @Max(2)
-    private int message = 1;
+    private CatMessage message = CatMessage.MEW;
     // no need to validate the boolean
     private boolean registered = false;
 
     public Envelope() {
     }
 
-    public int getMessage() {
+    public CatMessage getMessage() {
         return message;
     }
 
-    public void setMessage(int message) {
+    public void setMessage(CatMessage message) {
         this.message = message;
     }
 

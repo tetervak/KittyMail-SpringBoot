@@ -9,12 +9,12 @@
 <h1>Output</h1>
 <h2>Message</h2>
 
-<div th:switch="${envelope.message}">
-    <p th:case="0">Purr</p>
-    <!--/*/
-    <p th:case="1">Mew</p>
-    <p th:case="*">Hiss</p>
-    /*/-->
+<div th:switch="${envelope.message.name()}">
+    <p th:case="PURR">Purr</p>
+<!--/*/
+    <p th:case="MEW">Mew</p>
+    <p th:case="HISS">Hiss</p>
+/*/-->
 </div>
     <p th:text="${envelope.registered}?'Registered':'Not Registered'">
         Not Registered
